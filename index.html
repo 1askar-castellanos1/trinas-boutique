@@ -2,11 +2,183 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=8.3">
-    <title>trinas boutique</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trina's Boutique | Custom T-Shirts</title>
+    
+    <!-- CYBERSECURITY PROTECTION: CSP Policy (Content Security Policy) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://embed.tawk.to https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:;">
+
+    <!-- ENLACE AL ARCHIVO CSS (Asegúrate de nombrar tu archivo de estilos como "style.css") -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1> Welcome to Trina's Boutique </h1>
+
+    <!-- Ambient Glowing Background Orbs (Light Blue Tones) -->
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+
+    <!-- Header / Main Navigation Bar -->
+    <header class="navbar">
+        <div class="brand-container-nav">
+            <div class="logo-box-sm">TB</div>
+            <span class="nav-brand-top">TRINA'S BOUTIQUE</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#customize">Studio</a>
+            <a href="#features">Features</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <a href="#customize" class="btn-primary nav-btn">Create Designs</a>
+    </header>
+
+    <!-- Hero Section (First Element: Large Brand Name & Logo) -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <!-- TB LOGO & HUGE BRAND TITLE -->
+            <div class="main-brand-header">
+                <div class="main-logo-box">TB</div>
+                <h1 class="brand-title">TRINA'S BOUTIQUE</h1>
+            </div>
+            
+            <span class="badge">Exclusive Custom Collection</span>
+            <h2 class="hero-subtitle">Design & Wear Your Own <span>Custom T-Shirt</span></h2>
+            
+            <p>100% premium organic cotton. Pick your color, select your size, and bring your unique print ideas to life.</p>
+            
+            <div class="hero-buttons">
+                <a href="#customize" class="btn-primary glow-effect">Design Now</a>
+                <a href="#contact" class="btn-secondary">Direct Contact</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Customizer Section -->
+    <section id="customize" class="customizer-section">
+        <h2 class="section-title">Design <span>Studio</span></h2>
+        
+        <input type="radio" name="color-select" id="color-black" checked hidden>
+        <input type="radio" name="color-select" id="color-white" hidden>
+        <input type="radio" name="color-select" id="color-pink" hidden>
+        <input type="radio" name="color-select" id="color-purple" hidden>
+
+        <div class="customizer-card">
+            <!-- T-Shirt Live Preview Container -->
+            <div class="shirt-preview-container">
+                <div class="shirt-graphic">
+                    <svg class="shirt-svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 4.5C11.3 5.4 10.1 6 8.8 6H7L2 8.5L4 12.5L7 11V20H17V11L20 12.5L22 8.5L17 6H15.2C13.9 6 12.7 5.4 12 4.5Z"/>
+                    </svg>
+                    <div class="custom-print">
+                        <span class="custom-text-preview" id="text-output">YOUR DESIGN</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Customization Options -->
+            <div class="options-panel">
+                <h3>Choose Your Options</h3>
+
+                <div class="option-group">
+                    <label class="group-label">1. Select Color:</label>
+                    <div class="color-picker">
+                        <label for="color-black" class="color-btn btn-black" title="Black"></label>
+                        <label for="color-white" class="color-btn btn-white" title="White"></label>
+                        <label for="color-pink" class="color-btn btn-pink" title="Pink"></label>
+                        <label for="color-purple" class="color-btn btn-purple" title="Purple"></label>
+                    </div>
+                </div>
+
+                <div class="option-group">
+                    <label class="group-label">2. Select Size:</label>
+                    <div class="size-picker">
+                        <input type="radio" name="size" id="size-s" hidden checked>
+                        <label for="size-s" class="size-btn">S</label>
+
+                        <input type="radio" name="size" id="size-m" hidden>
+                        <label for="size-m" class="size-btn">M</label>
+
+                        <input type="radio" name="size" id="size-l" hidden>
+                        <label for="size-l" class="size-btn">L</label>
+
+                        <input type="radio" name="size" id="size-xl" hidden>
+                        <label for="size-xl" class="size-btn">XL</label>
+                    </div>
+                </div>
+
+                <div class="option-group">
+                    <label class="group-label" for="custom-text-input">3. Custom Text or Slogan:</label>
+                    <input type="text" id="custom-text-input" class="custom-input" placeholder="Type your slogan..." maxlength="20" autocomplete="off">
+                </div>
+
+                <a href="javascript:void(0)" onclick="Tawk_API.toggle()" class="btn-primary btn-block">Order via Live Chat</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="feature-card">
+            <div class="icon">💎</div>
+            <h3>Premium Quality</h3>
+            <p>Ultra-soft fabrics tested for comfort and durability.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🚀</div>
+            <h3>Fast Shipping</h3>
+            <p>Get your custom apparel delivered in record time.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🔒</div>
+            <h3>Secure Checkout</h3>
+            <p>SSL encrypted connection and maximum data protection.</p>
+        </div>
+    </section>
+
+    <!-- Contact & Email Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-card">
+            <h2>Have Questions About an Order?</h2>
+            <p>Reach out directly to our sales and technical support email:</p>
+            <a href="mailto:w880_20@hotmail.com" class="email-badge" rel="noopener noreferrer">
+                ✉️ w880_20@hotmail.com
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Trina's Boutique. All rights reserved. SSL Secured Site.</p>
+    </footer>
+
+    <!-- SECURITY INTERRUPTER & XSS SANITIZER SCRIPT -->
+    <script>
+        const inputField = document.getElementById('custom-text-input');
+        const outputText = document.getElementById('text-output');
+
+        inputField.addEventListener('input', function(e) {
+            let sanitizedText = e.target.value.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+            outputText.textContent = sanitizedText.toUpperCase() || 'YOUR DESIGN';
+        });
+    </script>
+
+    <!-- REAL-TIME LIVE CHAT INTEGRATION (TAWK.TO) -->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function(){
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/demo-mode/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
+
 </body>
 </html>
