@@ -4,11 +4,13 @@
 :root {
     --card-bg: rgba(255, 255, 255, 0.85); /* Tarjetas blancas con transparencia */
     --border-color: rgba(14, 116, 144, 0.25);
-    --primary: #0284c7;             /* Bright Medium Blue */
+    --primary: #0284c7;              /* Bright Medium Blue */
     --primary-glow: #0369a1;        /* Deep Blue for Text */
     --secondary: #06b6d4;           /* Cyan Accent */
     --text-main: #0f172a;           /* Dark Text for Contrast */
     --text-muted: #334155;          /* Secondary Muted Text */
+    --whatsapp-green: #25D366;      /* Verde Oficial de WhatsApp */
+    --whatsapp-hover: #1da851;
     --shirt-color: #121214;
 }
 
@@ -86,6 +88,7 @@ body {
     letter-spacing: 2px;
     background: linear-gradient(90deg, #0f172a, var(--primary-glow));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -106,7 +109,7 @@ body {
 }
 
 /* ==========================================================================
-   4. HERO SECTION
+   4. HERO SECTION & WHATSAPP BUTTONS
    ========================================================================== */
 .hero {
     min-height: 80vh;
@@ -128,6 +131,10 @@ body {
     backdrop-filter: blur(10px);
     border: 1px solid var(--border-color);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transform: rotate(-90deg);
+    trasform: rotatex(45deg);
+    writing-mode: vertical-rl;
+
 }
 
 .main-brand-header {
@@ -155,6 +162,7 @@ body {
     letter-spacing: 4px;
     background: linear-gradient(135deg, #0f172a 20%, var(--primary) 60%, var(--secondary) 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     text-transform: uppercase;
 }
@@ -187,6 +195,8 @@ body {
 .hero-buttons {
     display: flex;
     gap: 1.2rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .btn-primary {
@@ -206,19 +216,57 @@ body {
     box-shadow: 0 10px 25px rgba(2, 132, 199, 0.35);
 }
 
-.btn-secondary {
-    border: 1px solid rgba(15, 23, 42, 0.2);
-    color: var(--text-main);
+/* BOTÓN DE WHATSAPP */
+.btn-whatsapp {
+    background: var(--whatsapp-green);
+    color: #fff;
     padding: 0.8rem 1.8rem;
     border-radius: 50px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
     transition: 0.3s;
-    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
 }
 
-.btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.9);
+.btn-whatsapp:hover {
+    background: var(--whatsapp-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+}
+
+.btn-block {
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+/* BOTÓN FLOTANTE WHATSAPP */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: var(--whatsapp-green);
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+    background-color: var(--whatsapp-hover);
+    transform: scale(1.1);
 }
 
 /* ==========================================================================
@@ -389,6 +437,13 @@ body {
     gap: 1rem;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
     backdrop-filter: blur(10px);
+}
+
+.contact-buttons-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .email-badge {

@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trina's Boutique | Custom T-Shirts</title>
-    
-    <!-- CYBERSECURITY PROTECTION: CSP Policy (Content Security Policy) -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://embed.tawk.to https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:;">
 
-    <!-- ENLACE AL ARCHIVO CSS (Asegúrate de nombrar tu archivo de estilos como "style.css") -->
-    <link rel="stylesheet" href="style.css">
-    
+    <!-- CYBERSECURITY PROTECTION: CSP Policy (Content Security Policy) -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://embed.tawk.to https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:;">
+
+    <!-- ENLACE A LA HOJA DE ESTILOS CSS -->
+    <link rel= "stylesheet" href="style.css">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <!-- Ambient Glowing Background Orbs (Light Blue Tones) -->
@@ -37,7 +40,7 @@
         <a href="#customize" class="btn-primary nav-btn">Create Designs</a>
     </header>
 
-    <!-- Hero Section (First Element: Large Brand Name & Logo) -->
+    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
             <!-- TB LOGO & HUGE BRAND TITLE -->
@@ -45,15 +48,19 @@
                 <div class="main-logo-box">TB</div>
                 <h1 class="brand-title">TRINA'S BOUTIQUE</h1>
             </div>
-            
+
             <span class="badge">Exclusive Custom Collection</span>
             <h2 class="hero-subtitle">Design & Wear Your Own <span>Custom T-Shirt</span></h2>
-            
-            <p>100% premium organic cotton. Pick your color, select your size, and bring your unique print ideas to life.</p>
-            
+
+            <p>100% premium organic cotton. Pick your color, select your size, and bring your unique print ideas to
+                life.</p>
+
             <div class="hero-buttons">
                 <a href="#customize" class="btn-primary glow-effect">Design Now</a>
-                <a href="#contact" class="btn-secondary">Direct Contact</a>
+                <a href="https://wa.me/1234567890?text=Hello%20Trina's%20Boutique,%20I'm%20interested%20in%20a%20custom%20order!"
+                    target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+                    💬 WhatsApp Business
+                </a>
             </div>
         </div>
     </section>
@@ -61,7 +68,7 @@
     <!-- Interactive Customizer Section -->
     <section id="customize" class="customizer-section">
         <h2 class="section-title">Design <span>Studio</span></h2>
-        
+
         <input type="radio" name="color-select" id="color-black" checked hidden>
         <input type="radio" name="color-select" id="color-white" hidden>
         <input type="radio" name="color-select" id="color-pink" hidden>
@@ -71,8 +78,8 @@
             <!-- T-Shirt Live Preview Container -->
             <div class="shirt-preview-container">
                 <div class="shirt-graphic">
-                    <svg class="shirt-svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 4.5C11.3 5.4 10.1 6 8.8 6H7L2 8.5L4 12.5L7 11V20H17V11L20 12.5L22 8.5L17 6H15.2C13.9 6 12.7 5.4 12 4.5Z"/>
+                    <svg class="shirt-svg" viewbox ="0 0 24 24" fill="currentColor">
+                        <path d="M12 4.5C11.3 5.4 10.1 6 8.8 6H7L2 8.5L4 12.5L7 11V20H17V11L20 12.5L22 8.5L17 6H15.2C13.9 6 12.7 5.4 12 4.5Z" />
                     </svg>
                     <div class="custom-print">
                         <span class="custom-text-preview" id="text-output">YOUR DESIGN</span>
@@ -113,10 +120,14 @@
 
                 <div class="option-group">
                     <label class="group-label" for="custom-text-input">3. Custom Text or Slogan:</label>
-                    <input type="text" id="custom-text-input" class="custom-input" placeholder="Type your slogan..." maxlength="20" autocomplete="off">
+                    <input type="text" id="custom-text-input" class="custom-input" placeholder="Type your slogan..."
+                        maxlength="20" autocomplete="off">
                 </div>
 
-                <a href="javascript:void(0)" onclick="Tawk_API.toggle()" class="btn-primary btn-block">Order via Live Chat</a>
+                <a href="https://wa.me/1234567890?text=Hello!%20I%20would%20like%20to%20place%20an%20order."
+                    target="_blank" rel="noopener noreferrer" class="btn-whatsapp btn-block">
+                    💬 Order via WhatsApp
+                </a>
             </div>
         </div>
     </section>
@@ -144,12 +155,24 @@
     <section id="contact" class="contact-section">
         <div class="contact-card">
             <h2>Have Questions About an Order?</h2>
-            <p>Reach out directly to our sales and technical support email:</p>
-            <a href="mailto:w880_20@hotmail.com" class="email-badge" rel="noopener noreferrer">
-                ✉️ w880_20@hotmail.com
-            </a>
+            <p>Reach out directly to our sales and technical support:</p>
+            <div class="contact-buttons-container">
+                <a href="https://wa.me/1234567890?text=Hi!%20I%20have%20a%20question%20about%20an%20order."
+                    target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+                    💬 Chat on WhatsApp Business
+                </a>
+                <a href="mailto:w880_20@hotmail.com" class="email-badge" rel="noopener noreferrer">
+                    ✉️ w880_20@hotmail.com
+                </a>
+            </div>
         </div>
     </section>
+
+    <!-- BOTÓN FLOTANTE DE WHATSAPP EMPRESA -->
+    <a href="https://wa.me/1234567890?text=Hello%20Trina's%20Boutique!" class="whatsapp-float" target="_blank"
+        rel="noopener noreferrer" title="Chat with us on WhatsApp">
+        💬
+    </a>
 
     <!-- Footer -->
     <footer>
@@ -161,24 +184,12 @@
         const inputField = document.getElementById('custom-text-input');
         const outputText = document.getElementById('text-output');
 
-        inputField.addEventListener('input', function(e) {
+        inputField.addEventListener('input', function (e) {
             let sanitizedText = e.target.value.replace(/</g, "&lt;").replace(/>/g, "&gt;");
             outputText.textContent = sanitizedText.toUpperCase() || 'YOUR DESIGN';
         });
     </script>
 
-    <!-- REAL-TIME LIVE CHAT INTEGRATION (TAWK.TO) -->
-    <script type="text/javascript">
-        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-        (function(){
-            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/demo-mode/default';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin','*');
-            s0.parentNode.insertBefore(s1,s0);
-        })();
-    </script>
-
 </body>
+
 </html>
